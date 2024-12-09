@@ -6,13 +6,44 @@ const state = {
         nome: document.querySelector("input[name='nomeHeroi']"),
         xp: document.querySelector("input[name='xpHeroi']"),
 
+    },
+    values: {
+        nivel: "",
     }
-    // values: {
-
-    // }
     // actions: {
 
     // }
+}
+
+function calcularClassificacao(){
+    const nomeHeroi = state.view.nome.value;
+    const xpHeroi = parseInt(state.view.xp.value); 
+
+    console.log(typeof xpHeroi);
+
+    if (nomeHeroi === "" || xpHeroi === null) {
+        alert("Por favor, preencha todos os campos!");
+        return;
+    }
+
+    if(xpHeroi < 1001) {
+        state.values.nivel = "Ferro";
+    } else if (xpHeroi < 2001) {
+        state.values.nivel = "Bronze";
+    } else if (xpHeroi < 5001) {
+        state.values.nivel = "Prata";
+    } else if (xpHeroi < 7001) {
+        state.values.nivel = "Ouro";
+    } else if (xpHeroi < 8001) {
+        state.values.nivel = "Platina";
+    } else if (xpHeroi < 9001) {
+        state.values.nivel = "Ascendente";
+    } else if (xpHeroi < 10001) {
+        state.values.nivel = "Imortal";
+    } else if (xpHeroi > 10000) {
+        state.values.nivel = "Radiante";
+    }
+
 }
 
 function addBotaoListener() {
@@ -20,21 +51,12 @@ function addBotaoListener() {
 }
 
 function exibirResultado() {
+    calcularClassificacao();
+
+    const nivel = state.values.nivel;
     const nomeHeroi = state.view.nome.value;
-    const xpHeroi = state.view.xp.value; 
-
-    if (nomeHeroi === "" || xpHeroi === "") {
-        alert("Por favor, preencha todos os campos!");
-        return;
-    }
-
-    console.log("Nome:", nomeHeroi);
-    console.log("XP:", xpHeroi);
+    alert(`O herói ${nomeHeroi} está no nível ${nivel}`);
     
-    
-    alert(`Nome: ${nomeHeroi}\nXP: ${xpHeroi}`);
-    
-    // calcularClassificacao(params);
 }
 function init() {
     addBotaoListener();

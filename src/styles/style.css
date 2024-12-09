@@ -1,0 +1,85 @@
+body{
+    height: 100vh;
+}
+header{
+    display: flex;
+    background-color: #5B0DAF;
+    padding: 3em;
+}
+h1{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 60px;
+    font-weight: 400;
+    color: #ffffff;
+}
+main{
+    height: 75vh;
+    background-color: #F3D9FC;
+}
+section{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    width: 560px;
+    padding: 3em;
+}
+h2, section div, button{
+    margin: 0 auto;
+    padding: 4px;
+}
+h2{
+    font-size: 38px;
+    font-weight: 500;
+    margin-bottom: 1em;
+}
+section div{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+}
+section div label{
+    font-size: 34px;
+    
+}
+section div input {
+    border: 3px solid #5B0DAF;
+    border-radius: 20px;
+    height: 50px;
+    padding: 0 14px;
+    font-size: 32px;
+    background-color: transparent;
+    margin-top: 2px;
+}
+section div input::placeholder{
+    color: #AA8ACE;
+}
+section button {
+    margin-top: 20px;
+    width: 78%;
+    background-color: #5B0DAF;
+    color: #ffffff;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    font-size: 34px;
+}
+footer{
+    background-color: #5B0DAF;
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+}
+footer p, a{
+    font-family: "Raleway", serif;
+    color: #ffffff;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 300;
+    padding: 3px;
+}
+footer a{
+    text-decoration: none;
+    font-weight: 600;
+}

@@ -9,8 +9,7 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=VT323&display=swap" rel="stylesheet">
     <!-- Styles -->
     <link rel="stylesheet" href="src/styles/style.css">
     <link rel="stylesheet" href="src/styles/reset.css">
@@ -22,10 +21,14 @@
     <main>
         <section>
             <h2>Insira os dados do seu herói:</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" placeholder="nome do herói" name="nomeHeroi" id="nomeHeroi">
-            <label for="xpHeroi">XP:</label>
-            <input type="number" placeholder="0" step="500" min="0" name="xpHeroi" id="xpHeroi">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" placeholder="nome do herói" name="nomeHeroi" id="nomeHeroi" required>
+            </div>
+            <div>
+                <label for="xpHeroi">XP:</label>
+                <input type="number" placeholder="0" step="500" min="0" name="xpHeroi" id="xpHeroi" required>
+            </div>   
             <button id="meuBotao">Enviar</button>
         </section>
     </main>
